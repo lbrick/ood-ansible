@@ -18,7 +18,7 @@
   changed_when: true
 
 - name: Build the project (this will take some time)
-  ansible.builtin.command: "rake build -mj$(nproc) > build.out 2>&1"
+  ansible.builtin.command: "rake build -mj$(nproc)"
   args:
     chdir: "{{ ood_source_dir }}"
   poll: 30
